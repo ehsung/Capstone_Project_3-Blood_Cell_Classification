@@ -1,0 +1,7 @@
+These two links are directed to my saved model folder on google drive for download and loading to my modeling notebooks.
+
+Google Drive Link to Trained Base Model
+https://drive.google.com/file/d/1-G-akBsmfSaFu3UcNHWy6UctNeK_UUL9/view?usp=sharing
+
+Google Drive Link to Trained Tuned Model
+https://drive.google.com/file/d/1-PZvbnOp2B_9QLX8Fz4Rj2Gd64wzftsp/view?usp=sharing

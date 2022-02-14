@@ -1,0 +1,112 @@
+Found 12436 files belonging to 4 classes.
+Using 8706 files for training.
+Using 1856 files for validation.
+Using 1874 files for testing.
+
+Class Names:
+['EOSINOPHIL', 'LYMPHOCYTE', 'MONOCYTE', 'NEUTROPHIL']
+
+Batch Shapes:
+(32, 240, 320, 3)
+
+
+Model: Frozen Xception Base Model with self defined top layer
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 240, 320, 3)]     0         
+                                                                 
+ tf.math.truediv (TFOpLambda  (None, 240, 320, 3)      0         
+ )                                                               
+                                                                 
+ tf.math.subtract (TFOpLambd  (None, 240, 320, 3)      0         
+ a)                                                              
+                                                                 
+ xception (Functional)       (None, 8, 10, 2048)       20861480  
+                                                                 
+ global_average_pooling2d (G  (None, 2048)             0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout (Dropout)           (None, 2048)              0         
+                                                                 
+ dense (Dense)               (None, 1024)              2098176   
+                                                                 
+ dropout_1 (Dropout)         (None, 1024)              0         
+                                                                 
+ dense_1 (Dense)             (None, 512)               524800    
+                                                                 
+ dropout_2 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               65664     
+                                                                 
+ dropout_3 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_4 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 8)                 520       
+                                                                 
+ dropout_5 (Dropout)         (None, 8)                 0         
+                                                                 
+ dense_5 (Dense)             (None, 4)                 36        
+                                                                 
+=================================================================
+Total params: 23,558,932
+Trainable params: 2,697,452
+Non-trainable params: 20,861,480
+_________________________________________________________________
+
+Loss: 0.4967297613620758
+Accuracy 0.8180362582206726
+
+
+Model: Fully Unfrozen Xception Base Model with self defined top layer
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 240, 320, 3)]     0         
+                                                                 
+ tf.math.truediv (TFOpLambda  (None, 240, 320, 3)      0         
+ )                                                               
+                                                                 
+ tf.math.subtract (TFOpLambd  (None, 240, 320, 3)      0         
+ a)                                                              
+                                                                 
+ xception (Functional)       (None, 8, 10, 2048)       20861480  
+                                                                 
+ global_average_pooling2d (G  (None, 2048)             0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout (Dropout)           (None, 2048)              0         
+                                                                 
+ dense (Dense)               (None, 1024)              2098176   
+                                                                 
+ dropout_1 (Dropout)         (None, 1024)              0         
+                                                                 
+ dense_1 (Dense)             (None, 512)               524800    
+                                                                 
+ dropout_2 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               65664     
+                                                                 
+ dropout_3 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_4 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 8)                 520       
+                                                                 
+ dropout_5 (Dropout)         (None, 8)                 0         
+                                                                 
+ dense_5 (Dense)             (None, 4)                 36        
+                                                                 
+=================================================================
+Total params: 23,558,932
+Trainable params: 23,504,404
+Non-trainable params: 54,528
+_________________________________________________________________
+
+Loss: 0.10650672018527985
+Accuracy: 0.9642475843429565
